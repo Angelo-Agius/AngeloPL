@@ -1,0 +1,7 @@
+name: AngeloPL
+version: ${project.version}
+main: fr.agiusangelo.angeloPL.AngeloPL
+api-version: '1.20'
+authors: [ AGIUS Angelo ]
+description: Le plugin pour le serveur Minecraft du Twitch de Angelo
+website: https://github.com/Angelo-Agius
