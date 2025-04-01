@@ -1,7 +1,16 @@
 name: AngeloPL
 version: ${project.version}
-main: fr.agiusangelo.angeloPL.AngeloPL
+main: fr.agiusangelo.angeloPL.Main
 api-version: '1.20'
 authors: [ AGIUS Angelo ]
 description: Le plugin pour le serveur Minecraft du Twitch de Angelo
 website: https://github.com/Angelo-Agius
+commands:
+  easter:
+    description: EsterEgg tkt frr
+    usage: /<command> <joueur> <args>
+    permission: easter.use
+    permission-message: Vous n'avez pas la permission d'utiliser cette commande.
+permissions:
+  random.use:
+    default: op
