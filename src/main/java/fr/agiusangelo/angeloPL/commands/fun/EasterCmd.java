@@ -1,4 +1,4 @@
-package fr.agiusangelo.angeloPL.commands;
+package fr.agiusangelo.angeloPL.commands.fun;
 
 import fr.agiusangelo.angeloPL.Main;
 import org.bukkit.Bukkit;
@@ -25,12 +25,12 @@ public class EasterCmd implements CommandExecutor, TabCompleter {
 
     public EasterCmd(Main plugin) {
         this.plugin = plugin;
-        loadCustomItems(); // ✅ Correction du nom
+        loadCustomItems();
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String msg, String[] args) {
-        if (args.length < 2) { // ✅ Vérifie qu'on a bien un joueur + un item
+        if (args.length < 2) {
             sender.sendMessage(ChatColor.RED + "Usage: /" + command.getName() + " <joueur> <item>");
             return true;
         }
@@ -42,7 +42,7 @@ public class EasterCmd implements CommandExecutor, TabCompleter {
         }
 
         String itemName = args[1].toLowerCase();
-        if (!customItems.containsKey(itemName)) { // ✅ Vérifie si l'item existe
+        if (!customItems.containsKey(itemName)) {
             sender.sendMessage(ChatColor.RED + "Item introuvable ! Essayez: calvace");
             return true;
         }
@@ -77,7 +77,7 @@ public class EasterCmd implements CommandExecutor, TabCompleter {
         if (meta != null) {
             meta.setDisplayName("§a§lLa calvace de §e§k K §r§9§l§nCrotale §e§k K");
             meta.setLore(List.of("§3Bien lisse bien montante"));
-            meta.addEnchant(Enchantment.KNOCKBACK, 255, true); // ✅ Ajouté correctement
+            meta.addEnchant(Enchantment.KNOCKBACK, 255, true);
             item.setItemMeta(meta);
         }
         return item;

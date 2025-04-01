@@ -1,6 +1,6 @@
 package fr.agiusangelo.angeloPL;
 
-import fr.agiusangelo.angeloPL.commands.EasterCmd;
+import fr.agiusangelo.angeloPL.commands.fun.EasterCmd;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
