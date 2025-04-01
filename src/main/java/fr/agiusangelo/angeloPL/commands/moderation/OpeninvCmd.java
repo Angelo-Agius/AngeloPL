@@ -65,6 +65,13 @@ public class OpeninvCmd implements CommandExecutor, Listener, TabCompleter {
         return true;
     }
 
+    @EventHandler
+    public void onInventoryClick(InventoryClickEvent event) {
+        if (event.getView().getTitle().startsWith("Inventaire de ")) {
+            event.setCancelled(true);
+        }
+    }
+
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         List<String> completions = new ArrayList<>();

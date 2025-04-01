@@ -14,6 +14,8 @@ public final class Main extends JavaPlugin {
         getLogger().info(ANSI_GREEN + "AngeloPL has been enabled" + ANSI_RESET);
         getCommand("easter").setExecutor(new EasterCmd(this));
         getCommand("openinv").setExecutor(new OpeninvCmd(this));
+
+        getServer().getPluginManager().registerEvents(new OpeninvCmd(this),this);
     }
 
     @Override
