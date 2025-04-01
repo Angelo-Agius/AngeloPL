@@ -64,6 +64,7 @@ public class EasterCmd implements CommandExecutor, TabCompleter {
         } else if (args.length == 2) {
             completions.addAll(customItems.keySet());
         }
+
         return completions;
     }
 

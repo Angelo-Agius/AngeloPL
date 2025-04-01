@@ -1,6 +1,7 @@
 package fr.agiusangelo.angeloPL;
 
 import fr.agiusangelo.angeloPL.commands.fun.EasterCmd;
+import fr.agiusangelo.angeloPL.commands.moderation.OpeninvCmd;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
@@ -12,6 +13,7 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         getLogger().info(ANSI_GREEN + "AngeloPL has been enabled" + ANSI_RESET);
         getCommand("easter").setExecutor(new EasterCmd(this));
+        getCommand("openinv").setExecutor(new OpeninvCmd(this));
     }
 
     @Override

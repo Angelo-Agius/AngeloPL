@@ -11,6 +11,13 @@ commands:
     usage: /<command> <joueur> <args>
     permission: easter.use
     permission-message: Vous n'avez pas la permission d'utiliser cette commande.
+  openinv:
+    description: Ouvre l'inventaire d'un joueur
+    usage: /<command> <joueur>
+    permission: openinv.use
+    permission-message: Vous n'avez pas la permission d'utiliser cette commande.
 permissions:
-  random.use:
+  easter.use:
+    default: op
+  openinv:
     default: op
