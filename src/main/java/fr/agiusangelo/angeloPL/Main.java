@@ -21,6 +21,7 @@ public final class Main extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new OpeninvCmd(this),this);
         getServer().getPluginManager().registerEvents(new Freeze(this), this);
+        getServer().getPluginManager().registerEvents(new EasterCmd(this), this);
     }
 
     @Override
