@@ -16,8 +16,13 @@ commands:
     usage: /<command> <joueur>
     permission: openinv.use
     permission-message: Vous n'avez pas la permission d'utiliser cette commande.
+  freeze:
+    description: Fige un joueur
+    permission: freeze.use
 permissions:
   easter.use:
     default: op
   openinv:
+    default: op
+  freeze.use:
     default: op
